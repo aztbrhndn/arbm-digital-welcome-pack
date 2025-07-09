@@ -1,0 +1,11 @@
+ARBM Digital Welcome Pack
+Version: 1.0.0
+Build Date: 2025-07-09T04:50:15.784Z
+Package Type: Intranet Static Deployment
+Developer: Adhis
+Client: Al Rajhi Bank Malaysia (ARBM)
+
+This package contains all files necessary for deployment on corporate intranet servers.
+No external dependencies or internet connectivity required.
+
+For support and documentation, see DEPLOYMENT_README.md

@@ -1,0 +1,35 @@
+{
+  "name": "arbm-digital-welcome-pack",
+  "version": "1.0.0",
+  "description": "ARBM Digital Welcome Pack - Interactive slideshow presentation built with Reveal.js",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx http-server -p 8000 -c-1",
+    "dev:python": "python3 -m http.server 8000",
+    "dev:php": "php -S localhost:8000",
+    "start": "npx http-server -p 8000 -c-1",
+    "serve": "npx serve -s . -p 8000",
+    "build": "node scripts/build.js",
+    "build:clean": "rm -rf dist deployment",
+    "package": "node scripts/package.js",
+    "deploy": "npm run build && npm run package",
+    "deploy:zip": "npm run deploy && cd dist && zip -r ../arbm-digital-welcome-pack-v$(node -p \"require('./package.json').version\").zip .",
+    "deploy:test": "npm run build && npx http-server dist -p 8001 -c-1 -o",
+    "deploy:validate": "node scripts/validate-deployment.js",
+    "deploy:full": "npm run build:clean && npm run deploy && npm run deploy:validate && npm run deploy:zip"
+  },
+  "keywords": [
+    "reveal.js",
+    "presentation",
+    "slideshow",
+    "arbm",
+    "welcome-pack"
+  ],
+  "author": "Adhis",
+  "license": "ISC",
+  "dependencies": {
+    "reveal.js": "^5.2.1",
+    "reveal.js-menu": "^2.1.0"
+  }
+}
+

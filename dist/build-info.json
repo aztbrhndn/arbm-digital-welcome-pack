@@ -1,0 +1,30 @@
+{
+  "project": "ARBM Digital Welcome Pack",
+  "version": "1.0.0",
+  "buildDate": "2025-07-09T04:50:15.110Z",
+  "buildType": "production",
+  "environment": "intranet",
+  "developer": "Adhis",
+  "client": "Al Rajhi Bank Malaysia (ARBM)",
+  "files": {
+    "mainFile": "index.html",
+    "customStyles": "css/custom.css",
+    "customScripts": "js/custom.js",
+    "assets": "assets/",
+    "libraries": "lib/"
+  },
+  "serverRequirements": {
+    "type": "Static file server",
+    "minBrowsers": {
+      "chrome": "70+",
+      "firefox": "65+",
+      "safari": "12+",
+      "edge": "79+"
+    }
+  },
+  "deployment": {
+    "type": "Intranet hosting",
+    "requirements": "Web server with static file serving capability",
+    "entryPoint": "index.html"
+  }
+}
