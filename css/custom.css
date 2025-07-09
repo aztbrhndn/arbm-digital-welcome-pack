@@ -219,8 +219,8 @@ section {
   background: var(--arbm-secondary);
 }
 
-/* Navigation Menu Customization
-.reveal .slide-menu-button {
+/* Navigation Menu Customization */
+/* .reveal .slide-menu-button {
   position: fixed;
   top: 15px;
   left: 15px;

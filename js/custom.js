@@ -1,5 +1,12 @@
 // ARBM Digital Welcome Pack - Custom JavaScript
 
+// Wait for DOM to be ready before initializing Reveal.js
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize Reveal.js after DOM is ready
+  initializeReveal();
+});
+
+function initializeReveal() {
 // Initialize Reveal.js with custom configuration
 Reveal.initialize({
   // Display presentation control arrows
@@ -145,6 +152,9 @@ Reveal.initialize({
     // Specifies the width of the menu
     width: "normal",
 
+    // Animation effect for the menu
+    effect: "slide",
+
     // Add slide numbers to the titles in the slide list
     numbers: false,
 
@@ -165,24 +175,24 @@ Reveal.initialize({
 
     // Specify the themes that will be available in the themes menu panel
     themes: [
-      { name: "Black", theme: "node_modules/reveal.js/dist/theme/black.css" },
-      { name: "White", theme: "node_modules/reveal.js/dist/theme/white.css" },
-      { name: "League", theme: "node_modules/reveal.js/dist/theme/league.css" },
-      { name: "Sky", theme: "node_modules/reveal.js/dist/theme/sky.css" },
-      { name: "Beige", theme: "node_modules/reveal.js/dist/theme/beige.css" },
-      { name: "Simple", theme: "node_modules/reveal.js/dist/theme/simple.css" },
-      { name: "Serif", theme: "node_modules/reveal.js/dist/theme/serif.css" },
-      { name: "Blood", theme: "node_modules/reveal.js/dist/theme/blood.css" },
-      { name: "Night", theme: "node_modules/reveal.js/dist/theme/night.css" },
-      { name: "Moon", theme: "node_modules/reveal.js/dist/theme/moon.css" },
+      { name: "Black", theme: "lib/reveal.js/dist/theme/black.css" },
+      { name: "White", theme: "lib/reveal.js/dist/theme/white.css" },
+      { name: "League", theme: "lib/reveal.js/dist/theme/league.css" },
+      { name: "Sky", theme: "lib/reveal.js/dist/theme/sky.css" },
+      { name: "Beige", theme: "lib/reveal.js/dist/theme/beige.css" },
+      { name: "Simple", theme: "lib/reveal.js/dist/theme/simple.css" },
+      { name: "Serif", theme: "lib/reveal.js/dist/theme/serif.css" },
+      { name: "Blood", theme: "lib/reveal.js/dist/theme/blood.css" },
+      { name: "Night", theme: "lib/reveal.js/dist/theme/night.css" },
+      { name: "Moon", theme: "lib/reveal.js/dist/theme/moon.css" },
       {
         name: "Solarized",
-        theme: "node_modules/reveal.js/dist/theme/solarized.css",
+        theme: "lib/reveal.js/dist/theme/solarized.css",
       },
     ],
 
     // Specify the path to the default theme files
-    themesPath: "node_modules/reveal.js/dist/theme/",
+    themesPath: "lib/reveal.js/dist/theme/",
 
     // Specify which transitions menu options to make available
     transitions: true,
@@ -212,9 +222,15 @@ Reveal.initialize({
     loadIcons: true,
   },
 
-  // Plugin initialization
-  plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMenu],
+  // Plugin initialization  
+  plugins: [
+    RevealMarkdown,
+    RevealHighlight,
+    RevealNotes,
+    RevealMenu
+  ],
 });
+}
 
 // Custom JavaScript for enhanced functionality
 document.addEventListener("DOMContentLoaded", function () {
