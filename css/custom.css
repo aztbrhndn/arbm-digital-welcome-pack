@@ -2,16 +2,20 @@
 
 /* Root Variables - ARBM Brand Colors */
 :root {
-  --arbm-primary: #1b4f72;
-  --arbm-secondary: #2ecc71;
+  --arbm-primary: #221afb;
+  --arbm-secondary: #0900cb;
   --arbm-accent: #f39c12;
-  --arbm-dark: #2c3e50;
+  --arbm-dark: #000045;
   --arbm-light: #ecf0f1;
   --arbm-white: #ffffff;
   --arbm-gray: #7f8c8d;
 }
 
-/* Global Styles */
+.reveal-viewport {
+  background: var(--arbm-primary) !important;
+  background-color: var(--arbm-primary) !important;
+}
+
 .reveal {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: var(--arbm-dark);
@@ -19,11 +23,8 @@
 
 /* Custom slide backgrounds */
 section {
-  background: linear-gradient(
-    135deg,
-    var(--arbm-white) 0%,
-    var(--arbm-light) 100%
-  );
+  background: var(--arbm-primary);
+  color: var(--arbm-white);
   /* border-radius: 8px; */
   /* padding: 40px; */
   /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); */
@@ -33,18 +34,18 @@ section {
 .reveal h1,
 .reveal h2,
 .reveal h3 {
-  color: var(--arbm-primary);
+  color: var(--arbm-white);
   font-weight: 600;
 }
 
 .reveal h1 {
   font-size: 3em;
-  margin-bottom: 0.5em;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
 }
 
 .reveal h2 {
   font-size: 2.2em;
-  margin-bottom: 0.8em;
 }
 
 .reveal h3 {
@@ -54,11 +55,7 @@ section {
 
 /* Welcome Section Styles */
 .reveal section[data-menu-title="Welcome"] h1 {
-  background: linear-gradient(
-    45deg,
-    var(--arbm-primary),
-    var(--arbm-secondary)
-  );
+  background: linear-gradient(45deg, var(--arbm-white), var(--arbm-white));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -220,24 +217,95 @@ section {
 }
 
 /* Navigation Menu Customization */
-/* .reveal .slide-menu-button {
-  position: fixed;
-  top: 15px;
-  left: 15px;
-  z-index: 30;
-  background: var(--arbm-primary);
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 18px;
-  cursor: pointer;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+.reveal-viewport .reveal .slide-menu-button {
+  color: var(--arbm-white);
+}
+
+.reveal-viewport .reveal .slide-menu-button * {
+  color: var(--arbm-white);
+}
+
+/* Navigation Controls Customization */
+.reveal-viewport .reveal .controls {
+  color: var(--arbm-white);
+}
+
+.reveal-viewport .reveal .controls .navigate-left,
+.reveal-viewport .reveal .controls .navigate-right,
+.reveal-viewport .reveal .controls .navigate-up,
+.reveal-viewport .reveal .controls .navigate-down {
+  color: var(--arbm-white);
+}
+
+.reveal-viewport .reveal .controls .controls-arrow:before,
+.reveal-viewport .reveal .controls .controls-arrow:after {
+  background-color: var(--arbm-white);
+}
+
+/* Simplemenu Navigation Bar Customization */
+.menubar {
+  background: rgba(
+    34,
+    26,
+    251,
+    0.95
+  ); /* ARBM primary color with transparency */
+  /* backdrop-filter: blur(10px); */
+  /* border-bottom: 1px solid var(--arbm-dark); */
+  padding: 0.5em 1em;
+  top: 0;
+}
+
+.menubar > ul {
+  gap: 2em;
+}
+
+.menubar > ul a {
+  color: var(--arbm-white) !important;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.8em 1.2em;
+  border-radius: 6px;
   transition: all 0.3s ease;
 }
 
-.reveal .slide-menu-button:hover {
+.menubar > ul a:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.menubar > ul li a.active,
+.menubar > ul li.active a {
+  color: var(--arbm-white);
+  opacity: 1;
+  font-weight: 600;
+}
+
+/* Mobile responsiveness for simplemenu */
+@media (max-width: 768px) {
+  .menubar {
+    padding: 0.3em 1em;
+  }
+
+  .menubar > ul {
+    gap: 0.5em;
+    flex-wrap: wrap;
+  }
+
+  .menubar > ul a {
+    padding: 0.5em 0.8em;
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+  .menubar > ul a {
+    padding: 0.4em 0.6em;
+    font-size: 0.8em;
+  }
+}
+
+/* .reveal .slide-menu-button:hover {
   background: var(--arbm-secondary);
   transform: scale(1.1);
 } */
@@ -332,6 +400,15 @@ section {
 }
 
 /* Custom animations */
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+  }
+  to { 
+    opacity: 1; 
+  }
+}
+
 @keyframes slideInFromLeft {
   0% {
     transform: translateX(-100%);
@@ -405,6 +482,16 @@ section {
 }
 
 /* Animation classes */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Apply to Welcome section content when present */
+section[data-menu-title="Welcome"].present .fade-in {
+  animation-delay: 0.3s;
+}
+
 .slide-in-left {
   animation: slideInFromLeft 0.8s ease-out;
 }
@@ -449,7 +536,7 @@ section {
 }
 
 /* Welcome slide animations */
-.reveal section[data-menu-title="Welcome"] h1 {
+/* .reveal section[data-menu-title="Welcome"] h1 {
   animation: slideInFromTop 1s ease-out;
 }
 
@@ -459,7 +546,7 @@ section {
 
 .reveal section[data-menu-title="Welcome"] p {
   animation: slideInFromRight 1s ease-out 0.6s both;
-}
+} */
 
 /* Deal cards hover animations */
 .deal-card {

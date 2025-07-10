@@ -1,235 +1,244 @@
 // ARBM Digital Welcome Pack - Custom JavaScript
 
 // Wait for DOM to be ready before initializing Reveal.js
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener("DOMContentLoaded", function () {
   // Initialize Reveal.js after DOM is ready
   initializeReveal();
 });
 
 function initializeReveal() {
-// Initialize Reveal.js with custom configuration
-Reveal.initialize({
-  // Display presentation control arrows
-  controls: true,
+  // Initialize Reveal.js with custom configuration
+  Reveal.initialize({
+    // Display presentation control arrows
+    controls: true,
 
-  // Help the user learn the controls by providing hints
-  controlsTutorial: true,
+    // Help the user learn the controls by providing hints
+    controlsTutorial: true,
 
-  // Determines where controls appear
-  controlsLayout: "bottom-right",
+    // Determines where controls appear
+    controlsLayout: "bottom-right",
 
-  // Display a presentation progress bar
-  progress: true,
+    // Display a presentation progress bar
+    progress: true,
 
-  // Display the page number of the current slide
-  slideNumber: "c/t",
+    // Display the page number of the current slide
+    slideNumber: "c/t",
 
-  // Add the current slide number to the URL hash
-  hash: true,
+    // Add the current slide number to the URL hash
+    hash: true,
 
-  // Start with 1 for the hash rather than 0
-  hashOneBasedIndex: false,
+    // Start with 1 for the hash rather than 0
+    hashOneBasedIndex: false,
 
-  // Flags if we should monitor the hash and change slides accordingly
-  respondToHashChanges: true,
+    // Flags if we should monitor the hash and change slides accordingly
+    respondToHashChanges: true,
 
-  // Push each slide change to the browser history
-  history: true,
+    // Push each slide change to the browser history
+    history: true,
 
-  // Enable keyboard shortcuts for navigation
-  keyboard: true,
-
-  // Enable the slide overview mode
-  overview: true,
-
-  // Disables the default reveal.js slide layout
-  disableLayout: false,
-
-  // Vertical centering of slides
-  center: true,
-
-  // Enables touch navigation on devices with touch input
-  touch: true,
-
-  // Loop the presentation
-  loop: false,
-
-  // Change the presentation direction to be RTL
-  rtl: false,
-
-  // Randomizes the order of slides each time the presentation loads
-  shuffle: false,
-
-  // Turns fragments on and off globally
-  fragments: true,
-
-  // Flags whether to include the current fragment in the URL
-  fragmentInURL: false,
-
-  // Flags if the presentation is running in an embedded mode
-  embedded: false,
-
-  // Flags if we should show a help overlay when the questionmark key is pressed
-  help: true,
-
-  // Flags if speaker notes should be visible to all viewers
-  showNotes: false,
-
-  // Global override for autoplaying embedded media (video/audio/iframe)
-  autoPlayMedia: null,
-
-  // Global override for preloading lazy-loaded iframes
-  preloadIframes: null,
-
-  // Number of milliseconds between automatically proceeding to the next slide
-  autoSlide: 0,
-
-  // Stop auto-sliding after user input
-  autoSlideStoppable: true,
-
-  // Use this method for navigation when auto-sliding
-  autoSlideMethod: null,
-
-  // Specify the average time in seconds that you think you will spend presenting each slide
-  defaultTiming: null,
-
-  // Enable slide navigation via mouse wheel
-  mouseWheel: false,
-
-  // Apply a 3D roll to links on hover
-  rollingLinks: false,
-
-  // Hides the address bar on mobile devices
-  hideAddressBar: true,
-
-  // Opens links in an iframe preview overlay
-  previewLinks: false,
-
-  // Transition style
-  transition: "slide", // none/fade/slide/convex/concave/zoom
-
-  // Transition speed
-  transitionSpeed: "default", // default/fast/slow
-
-  // Transition style for full page slide backgrounds
-  backgroundTransition: "fade", // none/fade/slide/convex/concave/zoom
-
-  // Number of slides away from the current that are visible
-  viewDistance: 3,
-
-  // Number of slides away from the current that are visible on mobile devices
-  mobileViewDistance: 2,
-
-  // Parallax background image
-  parallaxBackgroundImage: "", // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
-
-  // Parallax background size
-  parallaxBackgroundSize: "", // CSS syntax, e.g. "2100px 900px"
-
-  // Number of pixels to move the parallax background per slide
-  parallaxBackgroundHorizontal: null,
-  parallaxBackgroundVertical: null,
-
-  // The display mode that will be used to show slides
-  display: "block",
-
-  // // The "normal" size of the presentation, aspect ratio will be preserved
-  // width: 1280,
-  // height: 720,
-
-  //   // Factor of the display size that should remain empty around the content
-  //   margin: 0.04,
-
-  //   // Bounds for smallest/largest possible scale to apply to content
-  //   minScale: 0.2,
-  //   maxScale: 2.0,
-
-  // Menu plugin configuration
-  menu: {
-    // Specifies which side of the presentation the menu will be shown
-    side: "left",
-
-    // Specifies the width of the menu
-    width: "normal",
-
-    // Animation effect for the menu
-    effect: "slide",
-
-    // Add slide numbers to the titles in the slide list
-    numbers: false,
-
-    // Specifies which slide elements will be used for generating the slide titles
-    titleSelector: "h1, h2, h3, h4, h5, h6",
-
-    // If slides do not have a matching title, use the beginning of the text content as the title
-    useTextContentForMissingTitles: false,
-
-    // Hide slides from the menu that do not have a title
-    hideMissingTitles: false,
-
-    // Add markers to the slide titles to indicate the progress through the presentation
-    markers: true,
-
-    // Specify custom panels to be included in the menu
-    custom: false,
-
-    // Specify the themes that will be available in the themes menu panel
-    themes: [
-      { name: "Black", theme: "lib/reveal.js/dist/theme/black.css" },
-      { name: "White", theme: "lib/reveal.js/dist/theme/white.css" },
-      { name: "League", theme: "lib/reveal.js/dist/theme/league.css" },
-      { name: "Sky", theme: "lib/reveal.js/dist/theme/sky.css" },
-      { name: "Beige", theme: "lib/reveal.js/dist/theme/beige.css" },
-      { name: "Simple", theme: "lib/reveal.js/dist/theme/simple.css" },
-      { name: "Serif", theme: "lib/reveal.js/dist/theme/serif.css" },
-      { name: "Blood", theme: "lib/reveal.js/dist/theme/blood.css" },
-      { name: "Night", theme: "lib/reveal.js/dist/theme/night.css" },
-      { name: "Moon", theme: "lib/reveal.js/dist/theme/moon.css" },
-      {
-        name: "Solarized",
-        theme: "lib/reveal.js/dist/theme/solarized.css",
-      },
-    ],
-
-    // Specify the path to the default theme files
-    themesPath: "lib/reveal.js/dist/theme/",
-
-    // Specify which transitions menu options to make available
-    transitions: true,
-
-    // Adds a menu button to the slides to open the menu panel
-    openButton: true,
-
-    // If true allows the slide number in the presentation to open the menu panel
-    openSlideNumber: false,
-
-    // If true allows the user to open and navigate the menu using the keyboard
+    // Enable keyboard shortcuts for navigation
     keyboard: true,
 
-    // By default the menu will close when navigating the menu away from it
-    sticky: false,
+    // Enable the slide overview mode
+    overview: true,
 
-    // If true allows the menu to open when the 'm' key is pressed
-    autoOpen: true,
+    // Disables the default reveal.js slide layout
+    disableLayout: false,
 
-    // If true the menu will be closed when a slide is navigated to
-    delayInit: false,
+    // Vertical centering of slides
+    center: true,
 
-    // If true the menu will be closed when the ESC key is pressed
-    openOnInit: false,
+    // Enables touch navigation on devices with touch input
+    touch: true,
 
-    // By default the menu will load it's own font-awesome library icons
-    loadIcons: true,
-  },
+    // Loop the presentation
+    loop: false,
 
-  // Plugin initialization  
-  plugins: [
-    RevealMarkdown,
-    RevealHighlight,
-    RevealNotes,
-    RevealMenu
-  ],
-});
+    // Change the presentation direction to be RTL
+    rtl: false,
+
+    // Randomizes the order of slides each time the presentation loads
+    shuffle: false,
+
+    // Turns fragments on and off globally
+    fragments: true,
+
+    // Flags whether to include the current fragment in the URL
+    fragmentInURL: false,
+
+    // Flags if the presentation is running in an embedded mode
+    embedded: false,
+
+    // Flags if we should show a help overlay when the questionmark key is pressed
+    help: true,
+
+    // Flags if speaker notes should be visible to all viewers
+    showNotes: false,
+
+    // Global override for autoplaying embedded media (video/audio/iframe)
+    autoPlayMedia: null,
+
+    // Global override for preloading lazy-loaded iframes
+    preloadIframes: null,
+
+    // Number of milliseconds between automatically proceeding to the next slide
+    autoSlide: 0,
+
+    // Stop auto-sliding after user input
+    autoSlideStoppable: true,
+
+    // Use this method for navigation when auto-sliding
+    autoSlideMethod: null,
+
+    // Specify the average time in seconds that you think you will spend presenting each slide
+    defaultTiming: null,
+
+    // Enable slide navigation via mouse wheel
+    mouseWheel: false,
+
+    // Apply a 3D roll to links on hover
+    rollingLinks: false,
+
+    // Hides the address bar on mobile devices
+    hideAddressBar: true,
+
+    // Opens links in an iframe preview overlay
+    previewLinks: false,
+
+    // Transition style
+    transition: "slide", // none/fade/slide/convex/concave/zoom
+
+    // Transition speed
+    transitionSpeed: "default", // default/fast/slow
+
+    // Transition style for full page slide backgrounds
+    backgroundTransition: "fade", // none/fade/slide/convex/concave/zoom
+
+    // Number of slides away from the current that are visible
+    viewDistance: 3,
+
+    // Number of slides away from the current that are visible on mobile devices
+    mobileViewDistance: 2,
+
+    // Parallax background image
+    parallaxBackgroundImage: "", // e.g. "'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg'"
+
+    // Parallax background size
+    parallaxBackgroundSize: "", // CSS syntax, e.g. "2100px 900px"
+
+    // Number of pixels to move the parallax background per slide
+    parallaxBackgroundHorizontal: null,
+    parallaxBackgroundVertical: null,
+
+    // The display mode that will be used to show slides
+    display: "block",
+
+    // The "normal" size of the presentation, aspect ratio will be preserved
+    // width: 1280,
+    // height: 720,
+    width: 960,
+
+    // Factor of the display size that should remain empty around the content
+    margin: 0.04,
+
+    // Bounds for smallest/largest possible scale to apply to content
+    minScale: 0.2,
+    maxScale: 2.0,
+
+    // Menu plugin configuration
+    menu: {
+      // Specifies which side of the presentation the menu will be shown
+      side: "left",
+
+      // Specifies the width of the menu
+      width: "normal",
+
+      // Animation effect for the menu
+      effect: "slide",
+
+      // Add slide numbers to the titles in the slide list
+      numbers: false,
+
+      // Specifies which slide elements will be used for generating the slide titles
+      titleSelector: "h1, h2, h3, h4, h5, h6",
+
+      // If slides do not have a matching title, use the beginning of the text content as the title
+      useTextContentForMissingTitles: false,
+
+      // Hide slides from the menu that do not have a title
+      hideMissingTitles: false,
+
+      // Add markers to the slide titles to indicate the progress through the presentation
+      markers: true,
+
+      // Specify custom panels to be included in the menu
+      custom: false,
+
+      // Specify the themes that will be available in the themes menu panel
+      themes: [
+        { name: "Black", theme: "lib/reveal.js/dist/theme/black.css" },
+        { name: "White", theme: "lib/reveal.js/dist/theme/white.css" },
+        { name: "League", theme: "lib/reveal.js/dist/theme/league.css" },
+        { name: "Sky", theme: "lib/reveal.js/dist/theme/sky.css" },
+        { name: "Beige", theme: "lib/reveal.js/dist/theme/beige.css" },
+        { name: "Simple", theme: "lib/reveal.js/dist/theme/simple.css" },
+        { name: "Serif", theme: "lib/reveal.js/dist/theme/serif.css" },
+        { name: "Blood", theme: "lib/reveal.js/dist/theme/blood.css" },
+        { name: "Night", theme: "lib/reveal.js/dist/theme/night.css" },
+        { name: "Moon", theme: "lib/reveal.js/dist/theme/moon.css" },
+        {
+          name: "Solarized",
+          theme: "lib/reveal.js/dist/theme/solarized.css",
+        },
+      ],
+
+      // Specify the path to the default theme files
+      themesPath: "lib/reveal.js/dist/theme/",
+
+      // Specify which transitions menu options to make available
+      transitions: true,
+
+      // Adds a menu button to the slides to open the menu panel
+      openButton: true,
+
+      // If true allows the slide number in the presentation to open the menu panel
+      openSlideNumber: false,
+
+      // If true allows the user to open and navigate the menu using the keyboard
+      keyboard: true,
+
+      // By default the menu will close when navigating the menu away from it
+      sticky: false,
+
+      // If true allows the menu to open when the 'm' key is pressed
+      autoOpen: true,
+
+      // If true the menu will be closed when a slide is navigated to
+      delayInit: false,
+
+      // If true the menu will be closed when the ESC key is pressed
+      openOnInit: false,
+
+      // By default the menu will load it's own font-awesome library icons
+      loadIcons: true,
+    },
+
+    // Simplemenu plugin configuration
+    simplemenu: {
+      menuclass: "menu",
+      activeclass: "active",
+      selectby: "data-name",
+      flat: true,
+      scale: 0.67,
+      barhtml: {
+        header: "<div class='menubar'><ul class='menu'></ul></div>",
+        footer: ""
+      }
+    },
+
+    // Plugin initialization
+    plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMenu, Simplemenu],
+  });
 }
 
 // Custom JavaScript for enhanced functionality

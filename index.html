@@ -16,6 +16,12 @@
     <!-- Menu Plugin CSS -->
     <link rel="stylesheet" href="lib/reveal.js/plugin/menu/menu.css" />
 
+    <!-- Simplemenu Plugin CSS -->
+    <link
+      rel="stylesheet"
+      href="lib/reveal.js/plugin/simplemenu/simplemenu.css"
+    />
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/custom.css" />
 
@@ -26,24 +32,38 @@
     <div class="reveal">
       <div class="slides">
         <!-- Welcome / Introduction Slide -->
-        <section data-menu-title="Welcome">
-          <section>
-            <h1 class="fragment fade-in">Welcome to ARBM</h1>
-            <h2 class="fragment fade-in" data-fragment-index="1">
-              Al Rajhi Bank Malaysia
-            </h2>
-            <p class="fragment fade-in" data-fragment-index="2">
-              Your Digital Welcome Pack
-            </p>
-            <small class="fragment fade-in" data-fragment-index="3"
+        <section
+          data-menu-title="Welcome"
+          data-name="Welcome"
+          data-auto-animate
+        >
+          <!-- <h1 class="fragment fade-in">Welcome to ARBM</h1>
+          <h2 class="fragment fade-in" data-fragment-index="1">
+            Al Rajhi Bank Malaysia
+          </h2>
+          <p class="fragment fade-in" data-fragment-index="2">
+            Your Digital Welcome Pack
+          </p>
+          <small class="fragment fade-in" data-fragment-index="3"
+            >Navigate through the presentation using the menu or arrow
+            keys</small
+          > -->
+          <div class="fade-in">
+            <p>Welcome to</p>
+            <h2>Al Rajhi Bank Malaysia</h2>
+            <p>Your Digital Welcome Pack</p>
+            <small
               >Navigate through the presentation using the menu or arrow
               keys</small
             >
-          </section>
+          </div>
         </section>
 
         <!-- Office Navigation Slide -->
-        <section data-menu-title="Office Navigation">
+        <section
+          data-menu-title="Office Navigation"
+          data-name="Office Navigation"
+        >
           <section>
             <h2>Office Navigation</h2>
             <p>Explore our office space with this interactive 3D tour</p>
@@ -69,7 +89,7 @@
         </section>
 
         <!-- Deals & Dining Slide -->
-        <section data-menu-title="Deals & Dining">
+        <section data-menu-title="Deals & Dining" data-name="Deals & Dining">
           <section>
             <h2>Deals & Dining</h2>
             <p>Discover great deals and dining options</p>
@@ -104,7 +124,7 @@
         </section>
 
         <!-- Policies Slide -->
-        <section data-menu-title="Policies">
+        <section data-menu-title="Policies" data-name="Policies">
           <section>
             <h2>Company Policies</h2>
             <div class="policies-container">
@@ -146,6 +166,9 @@
 
     <!-- Menu Plugin JS -->
     <script src="lib/reveal.js/plugin/menu/menu.js"></script>
+
+    <!-- Simplemenu Plugin JS -->
+    <script src="lib/reveal.js/plugin/simplemenu/simplemenu.js"></script>
 
     <!-- Custom JS -->
     <script src="js/custom.js"></script>
