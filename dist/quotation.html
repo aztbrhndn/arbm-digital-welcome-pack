@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service Quotation - ARBM Digital Welcome Pack</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f8f9fa;
+        color: #333;
+      }
+
+      .invoice-container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: white;
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 40px;
+        border-bottom: 3px solid #0078d4;
+        padding-bottom: 20px;
+      }
+
+      .logo-section h1 {
+        color: #0078d4;
+        font-size: 32px;
+        margin: 0;
+        font-weight: bold;
+      }
+
+      .logo-section p {
+        color: #666;
+        margin: 5px 0 0 0;
+        font-size: 16px;
+      }
+
+      .invoice-info {
+        text-align: right;
+      }
+
+      .invoice-info h2 {
+        color: #0078d4;
+        font-size: 28px;
+        margin: 0;
+      }
+
+      .invoice-info p {
+        margin: 5px 0;
+        color: #666;
+      }
+
+      .billing-section {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+      }
+
+      .bill-from,
+      .bill-to {
+        width: 48%;
+      }
+
+      .bill-from h3,
+      .bill-to h3 {
+        color: #0078d4;
+        margin-bottom: 15px;
+        font-size: 18px;
+        border-bottom: 2px solid #e1e5e9;
+        padding-bottom: 5px;
+      }
+
+      .bill-from p,
+      .bill-to p {
+        margin: 3px 0;
+        line-height: 1.4;
+      }
+
+      .services-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 30px;
+      }
+
+      .services-table th {
+        background-color: #0078d4;
+        color: white;
+        padding: 15px;
+        text-align: left;
+        font-weight: 600;
+      }
+
+      .services-table td {
+        padding: 12px 15px;
+        border-bottom: 1px solid #e1e5e9;
+      }
+
+      .services-table tr:nth-child(even) {
+        background-color: #f8f9fa;
+      }
+
+      .amount-column {
+        text-align: right;
+      }
+
+      .totals-section {
+        margin-left: auto;
+        width: 300px;
+        border-top: 2px solid #0078d4;
+        padding-top: 20px;
+      }
+
+      .total-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        padding: 5px 0;
+      }
+
+      .final-total {
+        font-size: 20px;
+        font-weight: bold;
+        color: #0078d4;
+        border-top: 2px solid #0078d4;
+        padding-top: 10px;
+      }
+
+      .terms-section {
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid #e1e5e9;
+      }
+
+      .terms-section h3 {
+        color: #0078d4;
+        margin-bottom: 15px;
+      }
+
+      .terms-section ul {
+        margin: 10px 0;
+        padding-left: 20px;
+      }
+
+      .terms-section li {
+        margin-bottom: 5px;
+        line-height: 1.4;
+      }
+
+      .payment-info {
+        background-color: #f1f8ff;
+        padding: 20px;
+        border-left: 4px solid #0078d4;
+        margin-top: 20px;
+      }
+
+      .payment-info h4 {
+        color: #0078d4;
+        margin: 0 0 10px 0;
+      }
+
+      @media print {
+        body {
+          background-color: white;
+        }
+        .invoice-container {
+          box-shadow: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="invoice-container">
+      <!-- Header Section -->
+      <div class="header">
+        <div class="logo-section">
+          <h1>SERVICE QUOTATION</h1>
+          <p>Professional Web Development Services</p>
+        </div>
+        <div class="invoice-info">
+          <h2>Quote SW1004</h2>
+          <p><strong>Date:</strong> July 9, 2025</p>
+          <p><strong>Project:</strong> SW1004 ARB Digital Welcome Pack</p>
+        </div>
+      </div>
+
+      <!-- Billing Information -->
+      <div class="billing-section">
+        <div class="bill-from">
+          <h3>Payee Information</h3>
+          <p><strong>Aizat bin Borhanudin</strong></p>
+          <p>28 Dutamas</p>
+          <p>Jalan Dutamas Raya</p>
+          <p>Kuala Lumpur 51200</p>
+          <p>Malaysia</p>
+          <br />
+          <p><strong>Email:</strong> aizat.borhanudin@hotmail.com</p>
+          <p><strong>Rate:</strong> RM 90/hour</p>
+        </div>
+
+        <div class="bill-to">
+          <h3>Bill To</h3>
+          <p><strong>Momentum Design Sdn Bhd</strong></p>
+          <p>Company Registration No.: 199801001942 (458068-P)</p>
+          <p>47 Jalan Teberau 1</p>
+          <p>Ukay Heights</p>
+          <p>Selangor 68000</p>
+          <p>Malaysia</p>
+          <br />
+          <p><strong>End Client:</strong> Al Rajhi Bank Malaysia (ARBM)</p>
+        </div>
+      </div>
+
+      <!-- Services Table -->
+      <table class="services-table">
+        <thead>
+          <tr>
+            <th>Service Description</th>
+            <th style="width: 80px">Hours</th>
+            <th style="width: 100px">Rate (RM)</th>
+            <th style="width: 120px">Amount (RM)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <strong>Setup & Learning Phase</strong><br />
+              <ul style="margin: 5px 0; padding-left: 15px; font-size: 14px">
+                <li>Reveal.js framework familiarization</li>
+                <li>Development environment setup</li>
+                <li>Framework research and best practices</li>
+              </ul>
+            </td>
+            <td class="amount-column">8</td>
+            <td class="amount-column">90</td>
+            <td class="amount-column">720.00</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Core Development</strong><br />
+              <ul style="margin: 5px 0; padding-left: 15px; font-size: 14px">
+                <li>Basic slideshow structure implementation</li>
+                <li>Custom navigation menu development</li>
+                <li>Mobile responsiveness implementation</li>
+                <li>Swipe functionality for touch devices</li>
+              </ul>
+            </td>
+            <td class="amount-column">20</td>
+            <td class="amount-column">90</td>
+            <td class="amount-column">1,800.00</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Integration & Content Implementation</strong><br />
+              <ul style="margin: 5px 0; padding-left: 15px; font-size: 14px">
+                <li>Matterport 3D tour iframe embedding</li>
+                <li>Content implementation for 4 main slides</li>
+                <li>Media asset integration</li>
+              </ul>
+            </td>
+            <td class="amount-column">5</td>
+            <td class="amount-column">90</td>
+            <td class="amount-column">450.00</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Styling & Polish</strong><br />
+              <ul style="margin: 5px 0; padding-left: 15px; font-size: 14px">
+                <li>Custom theming with provided branding assets</li>
+                <li>Reveal.js animations and transitions</li>
+                <li>Cross-browser compatibility testing</li>
+                <li>Mobile optimization refinements</li>
+              </ul>
+            </td>
+            <td class="amount-column">7</td>
+            <td class="amount-column">90</td>
+            <td class="amount-column">630.00</td>
+          </tr>
+          <tr>
+            <td>
+              <strong>Documentation & Deployment Preparation</strong><br />
+              <ul style="margin: 5px 0; padding-left: 15px; font-size: 14px">
+                <li>README file creation</li>
+                <li>Intranet deployment guide</li>
+                <li>Content update instructions</li>
+              </ul>
+            </td>
+            <td class="amount-column">5</td>
+            <td class="amount-column">90</td>
+            <td class="amount-column">450.00</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Totals Section -->
+      <div class="totals-section">
+        <div class="total-row">
+          <span>Total Hours:</span>
+          <span>45 hours</span>
+        </div>
+        <div class="total-row">
+          <span>Subtotal:</span>
+          <span>RM 4,050.00</span>
+        </div>
+        <div class="total-row">
+          <span>GST (0%):</span>
+          <span>RM 0.00</span>
+        </div>
+        <div class="total-row final-total">
+          <span>Total Amount:</span>
+          <span>RM 4,050.00</span>
+        </div>
+      </div>
+
+      <!-- Payment Information -->
+      <div class="payment-info">
+        <h4>Banking Details for Payment</h4>
+        <p><strong>Bank Name:</strong> Maybank</p>
+        <p>
+          <strong>Branch Address:</strong> Branch 11, 13 & 15 Ground & First
+          Floor, Jalan Solaris 1, Mont Kiara Kuala Lumpur 50480
+        </p>
+        <p><strong>Account Number:</strong> 164726095529</p>
+        <p><strong>Account Holder:</strong> Aizat bin Borhanudin</p>
+      </div>
+
+      <!-- Terms and Conditions -->
+      <div class="terms-section">
+        <h3>Terms & Conditions</h3>
+
+        <h4>Payment Terms:</h4>
+        <ul>
+          <li>50% deposit (RM 2,025) required before project commencement</li>
+          <li>
+            50% balance (RM 2,025) due upon project completion and delivery
+          </li>
+          <li>Payment terms: Net 30 days from invoice date</li>
+        </ul>
+
+        <h4>Timeline & Deliverables:</h4>
+        <ul>
+          <li>Estimated completion: 7 working days from project start</li>
+          <li>Live preview link provided during development</li>
+          <li>Final delivery includes source files and deployment package</li>
+        </ul>
+
+        <h4>Client Responsibilities:</h4>
+        <ul>
+          <li>Provide all content, branding assets, and Matterport links</li>
+          <li>Timely feedback to maintain project timeline</li>
+          <li>Final designs/wireframes before development begins</li>
+        </ul>
+
+        <p>
+          <strong>Quote Validity:</strong> This quotation is valid for 30 days
+          from the date above.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
+

@@ -6,33 +6,48 @@ A responsive, interactive slideshow presentation built with Reveal.js for Al Raj
 
 ### Development Server Options
 
-**Option 1: Node.js http-server (Recommended)**
-
-```bash
-npm run dev
-# or
-npm start
-```
-
-**Option 2: Node.js serve**
+**Option 1: Serve (Recommended)**
 
 ```bash
 npm run serve
 ```
 
-**Option 3: Direct commands**
+**Option 2: Alternative Development Servers**
 
-```bash
-# http-server (best for development)
-npx http-server -p 8000 -c-1
-
-# serve (modern alternative)
-npx serve -s . -p 8000
+````bash
+# http-server
+npm run http-server
 
 Visit `http://localhost:8000` in your browser.
 
+### Build and Deployment
+
+```bash
+# Build production version
+npm run build
+
+# Package for deployment with documentation
+npm run package
+
+# Complete deployment process
+npm run deploy
+
+# Full deployment with validation and archive
+npm run deploy:full
+
+# Validate deployment
+npm run deploy:validate
+
+# Test deployment locally
+npm run deploy:test
+
+# Create deployment archive
+npm run deploy:zip
+````
+
 ### Static Deployment
-All files can be deployed directly to any web server or intranet. Simply upload the entire folder structure to your web server.
+
+All files can be deployed directly to any web server or intranet. The build process creates an optimized `/dist` directory for deployment.
 
 ## 📁 Project Structure
 
@@ -47,25 +62,32 @@ arbm-digital-welcome-pack/
 ├── assets/
 │ ├── images/ # Image files
 │ └── icons/ # Icon files
+├── scripts/
+│ ├── build.js # Production build system
+│ └── package.js # Deployment documentation generator
+├── dist/ # Production build output
 ├── node_modules/ # Dependencies (Reveal.js, plugins)
 ├── package.json # Project configuration
 └── README.md # This file
 
-````
+```
 
 ## 🎯 Features
 
-- **Mobile-Responsive Design**: Optimized for desktop and mobile devices
-- **Touch Navigation**: Swipe gestures for mobile navigation
+- **Mobile-Responsive Design**: Optimized for desktop and mobile devices with touch navigation
 - **Interactive Menu**: Slide-out navigation menu for easy section jumping
-- **Matterport Integration**: 3D office tour embedding
+- **Matterport Integration**: 3D office tour embedding (placeholder ready)
 - **ARBM Branding**: Custom theme with Al Rajhi Bank Malaysia colors
-- **Smooth Animations**: Reveal.js transitions and custom animations
-- **Accessibility**: Keyboard navigation and screen reader support
+- **Progressive Loading**: External content loads progressively for better performance
+- **Local Storage**: Presentation state persistence across sessions
+- **Multi-Server Support**: Apache, IIS, Nginx configurations included
+- **Deployment Validation**: Automated deployment validation system
+- **Static Hosting**: No server-side processing required
 
 ## 📱 Navigation
 
 ### Desktop
+
 - **Arrow Keys**: Navigate slides
 - **ESC**: Toggle overview mode
 - **M**: Open/close menu
@@ -74,6 +96,7 @@ arbm-digital-welcome-pack/
 - **P**: Pause presentation
 
 ### Mobile
+
 - **Swipe Left/Right**: Navigate horizontal slides
 - **Swipe Up/Down**: Navigate vertical slides
 - **Tap Menu Button**: Open navigation menu
@@ -84,14 +107,16 @@ arbm-digital-welcome-pack/
 ### Updating Slide Content
 
 #### 1. Welcome Section
+
 Edit the welcome slide in `index.html`:
+
 ```html
 <section data-menu-title="Welcome">
-    <h1>Welcome to ARBM</h1>
-    <h2>Al Rajhi Bank Malaysia</h2>
-    <p>Your Digital Welcome Pack</p>
+  <h1>Welcome to ARBM</h1>
+  <h2>Al Rajhi Bank Malaysia</h2>
+  <p>Your Digital Welcome Pack</p>
 </section>
-````
+```
 
 #### 2. Matterport Tour
 
@@ -199,6 +224,8 @@ Edit `css/custom.css` to modify:
 - **Mobile Safari**: 12+
 - **Chrome Mobile**: 70+
 
+Optimized for corporate intranet environments.
+
 ## 📊 Analytics & Tracking
 
 Basic analytics are logged to console. To add real analytics:
@@ -263,7 +290,13 @@ Reveal.addEventListener("slidechanged", function (event) {
 ```bash
 # Create deployment package
 npm run build
-# This creates a clean package ready for deployment
+# This creates an optimized /dist directory ready for deployment
+
+# Package with documentation
+npm run package
+
+# Create deployment archive
+npm run deploy:zip
 ```
 
 ## 🔐 Security Considerations
@@ -272,6 +305,7 @@ npm run build
 - **HTTPS**: Use HTTPS for external resources
 - **Iframe Security**: Verify Matterport iframe sources
 - **Input Validation**: Sanitize any user-generated content
+- **Security Headers**: Configured for corporate intranet environments
 
 ## 📝 License
 
@@ -281,7 +315,7 @@ This project is proprietary to Al Rajhi Bank Malaysia. All rights reserved.
 
 For technical support or questions:
 
-- **Developer**: Adhis
+- **Developer**: Aizat
 - **Project**: ARBM Digital Welcome Pack
 - **Documentation**: This README file
 
@@ -312,4 +346,5 @@ When updating content, ensure:
 ---
 
 _Last updated: [Current Date]_
-_Project by: Adhis for Al Rajhi Bank Malaysia_
+_Project by: Aizat for Al Rajhi Bank Malaysia_
+

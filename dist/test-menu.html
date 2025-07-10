@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu Test</title>
+    <link rel="stylesheet" href="lib/reveal.js/dist/reveal.css">
+    <link rel="stylesheet" href="lib/reveal.js/dist/theme/white.css">
+    <link rel="stylesheet" href="lib/reveal.js/plugin/menu/menu.css">
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>Test Slide 1</h1>
+                <p>This is a test slide.</p>
+            </section>
+            <section>
+                <h2>Test Slide 2</h2>
+                <p>This is another test slide.</p>
+            </section>
+        </div>
+    </div>
+
+    <script src="lib/reveal.js/dist/reveal.js"></script>
+    <script src="lib/reveal.js/plugin/menu/menu.js"></script>
+    <script>
+        console.log('RevealMenu available:', typeof RevealMenu);
+        
+        Reveal.initialize({
+            plugins: [RevealMenu],
+            menu: {
+                themes: false,
+                transitions: false,
+                openButton: true,
+                keyboard: true
+            }
+        });
+    </script>
+</body>
+</html>

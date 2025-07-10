@@ -220,7 +220,7 @@ section {
 }
 
 /* Navigation Menu Customization */
-.reveal .slide-menu-button {
+/* .reveal .slide-menu-button {
   position: fixed;
   top: 15px;
   left: 15px;
@@ -240,7 +240,7 @@ section {
 .reveal .slide-menu-button:hover {
   background: var(--arbm-secondary);
   transform: scale(1.1);
-}
+} */
 
 /* Mobile Responsive Design */
 @media (max-width: 768px) {

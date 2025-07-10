@@ -1,10 +1,10 @@
 {
   "project": "ARBM Digital Welcome Pack",
   "version": "1.0.0",
-  "buildDate": "2025-07-09T09:09:07.974Z",
+  "buildDate": "2025-07-10T02:15:31.366Z",
   "buildType": "production",
   "environment": "intranet",
-  "developer": "Adhis",
+  "developer": "Aizat",
   "client": "Al Rajhi Bank Malaysia (ARBM)",
   "files": {
     "mainFile": "index.html",

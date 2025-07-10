@@ -152,6 +152,9 @@ Reveal.initialize({
     // Specifies the width of the menu
     width: "normal",
 
+    // Animation effect for the menu
+    effect: "slide",
+
     // Add slide numbers to the titles in the slide list
     numbers: false,
 

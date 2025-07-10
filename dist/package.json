@@ -5,8 +5,6 @@
   "main": "index.html",
   "scripts": {
     "dev": "npx http-server -p 8000 -c-1",
-    "dev:python": "python3 -m http.server 8000",
-    "dev:php": "php -S localhost:8000",
     "start": "npx http-server -p 8000 -c-1",
     "serve": "npx serve -s . -p 8000",
     "build": "node scripts/build.js",
@@ -25,7 +23,7 @@
     "arbm",
     "welcome-pack"
   ],
-  "author": "Adhis",
+  "author": "Aizat",
   "license": "ISC",
   "dependencies": {
     "reveal.js": "^5.2.1",
